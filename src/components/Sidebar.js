@@ -7,9 +7,12 @@ import { links } from '../utils/constants';
 import styled from 'styled-components';
 import CartButtons from './CartButtons';
 import { useUserContext } from '../context/user_context';
+import { GiDatabase } from 'react-icons/gi';
 
 const Sidebar = () => {
-  const isOpen = true;
+  const data = useProductsContext();
+  console.log(data)
+  const isOpen = false
   return (
     <SidebarContainer>
       <aside className={`${isOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
